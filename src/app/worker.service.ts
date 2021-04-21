@@ -23,10 +23,6 @@ export class WorkerService {
     return this.http.get(`${this.baseApi}/${id}`);
   }
 
-  // filter(id:any):Observable<any>{
-  //   let paramsQuery = new HttpParams().set('print','pretty');
-  //   return this.http.get(`${this.baseApi}/${id}`, {params:paramsQuery});
-  // }
 
 
 }

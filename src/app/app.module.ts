@@ -7,11 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { WorkerListComponent } from './worker-list/worker-list.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './header/header.component';
-import { AutofocusDirective } from './autofocus.directive';
-import { WorkerItemComponent } from './worker-item/worker-item.component';
-import { FilterPipe } from './filter.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';import { WorkerItemComponent } from './worker-item/worker-item.component';
 
 
 
@@ -19,10 +15,7 @@ import { FilterPipe } from './filter.pipe';
   declarations: [
     AppComponent,
     WorkerListComponent,
-    HeaderComponent,
-    AutofocusDirective,
-    WorkerItemComponent,
-    FilterPipe,
+    WorkerItemComponent
   ],
   imports: [
     BrowserModule,
