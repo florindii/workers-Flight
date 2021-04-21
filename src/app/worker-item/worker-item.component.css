@@ -18,3 +18,11 @@ p{
     margin-right: 15px;
     margin-left: 15px;
 }
+tr{
+  cursor: pointer;
+}
+tr:hover, nav ul li a:focus {
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}
