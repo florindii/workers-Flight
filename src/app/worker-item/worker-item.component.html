@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-8">
+    <table class="table table-striped">
+
+      <thead>
+        <tr>
+            <th>Flighht Number</th>
+            <th>Origin</th>
+            <th>Origin Date</th>
+            <th>Destination</th>
+            <th>Destination Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr (click)="getFlight(worker.num)" *ngFor="let worker of flightDetail">
+            <td >{{worker.num}}</td>
+            <td> {{worker.from }} </td>
+            <td> {{worker.to }} </td>
+            <td> {{worker.from_date }} </td>
+            <td> {{worker.to_date }} </td>
+        </tr>
+    </tbody>
+    </table>
+
+
+   </div>
+
+  <div class="flight-info col-md-4">
+
+    <table class="flight-info-table table">
+
+    <tbody>
+        <div *ngIf="flightInfo">
+          <p><label>number</label> &nbsp;<span>{{flightInfo.num}}</span></p>
+          <p><label>duration</label> &nbsp;<span>{{flightInfo.duration  }}</span> </p>
+          <p><label>from</label> &nbsp;<span>{{flightInfo.from_gate }} </span></p>
+          <p><label>to</label> &nbsp;<span>{{flightInfo.to_gate }} </span></p>
+          <hr>
+      </div>
+    </tbody>
+    </table>
+
+  </div>
+</div>
+
+

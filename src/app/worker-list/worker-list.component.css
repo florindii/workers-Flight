@@ -1,0 +1,27 @@
+.container{
+  border:2px solid;
+}
+.workers{
+  border-right: 2px solid;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul li {
+  float: left;
+  margin-right: 1.5em;
+}
+
+ul li a {
+  padding: 0.25em 1em;
+  text-decoration: none; /* no underline */
+  background-color: lightgray; /* pale bluish white */
+  color: black; /* dark blue */
+}
+ul li a:hover, nav ul li a:focus {
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}
