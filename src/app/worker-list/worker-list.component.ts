@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./worker-list.component.css']
 })
 export class WorkerListComponent implements OnInit {
-
+  selectedWorker?: any;
   workers:any = [];
   constructor(private workerService: WorkerService,private actRoute: ActivatedRoute, private router:Router) { }
 
@@ -25,6 +25,10 @@ export class WorkerListComponent implements OnInit {
   // method to navigate to the first worker
   getfirst(id:any){
     this.router.navigate(['worker-list',id]);
+  }
+  // activate selected worker
+  onSelect(worker: any): void {
+    this.selectedWorker = worker;
   }
 
 }

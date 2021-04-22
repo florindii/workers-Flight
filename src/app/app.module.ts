@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { WorkerListComponent } from './worker-list/worker-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';import { WorkerItemComponent } from './worker-item/worker-item.component';
+import { FormatDurationPipe } from './format-duration.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';import { WorkerItemCompon
   declarations: [
     AppComponent,
     WorkerListComponent,
-    WorkerItemComponent
+    WorkerItemComponent,
+    FormatDurationPipe
   ],
   imports: [
     BrowserModule,

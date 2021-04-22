@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-8">
-    <table class="table table-striped">
+    <table class="table">
 
       <thead>
         <tr>
@@ -12,7 +12,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr (click)="getFlight(worker.num)" *ngFor="let worker of flightDetail">
+        <tr class="tr" (click)="getFlight(worker.num)"
+         *ngFor="let worker of flightDetail"
+         [class.selected]=" worker.num === selectedFlight"
+         (click)="onSelect(worker.num)">
             <td >{{worker.num}}</td>
             <td> {{worker.from }} </td>
             <td> {{worker.to }} </td>
@@ -32,7 +35,7 @@
     <tbody>
         <div *ngIf="flightInfo">
           <p><label>number</label> &nbsp;<span>{{flightInfo.num}}</span></p>
-          <p><label>duration</label> &nbsp;<span>{{flightInfo.duration  }}</span> </p>
+          <p><label>duration</label> &nbsp;<span>{{flightInfo.duration | formatDuration}}</span> </p>
           <p><label>from</label> &nbsp;<span>{{flightInfo.from_gate }} </span></p>
           <p><label>to</label> &nbsp;<span>{{flightInfo.to_gate }} </span></p>
           <hr>

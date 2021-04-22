@@ -21,8 +21,24 @@ p{
 tr{
   cursor: pointer;
 }
-tr:hover, nav ul li a:focus {
-  color: black;
-  background-color: white;
-  font-weight: bold;
+
+
+tr:hover {
+  color: black !important;
+  background-color: #e6e6e6 !important;
+  left: .1em;
 }
+tr .selected {
+  background-color:lightgray !important;
+  color: black !important;
+}
+tr .selected:hover {
+  background-color: lightgray !important;
+  color: black !important;
+}
+tr .selected:active {
+  background-color: lightgray !important;
+  color: black !important;
+}
+
+

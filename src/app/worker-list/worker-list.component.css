@@ -3,27 +3,36 @@
 }
 .workers{
   border-right: 2px solid;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-ul{
+.nav {
   list-style-type: none;
-}
+  margin-top: 50px;
 
-ul li {
+}
+.nav li {
   float: left;
-  margin-right: 1.5em;
   width: 100%;
-  border-bottom: 2px solid;
 }
-
-ul li a {
-  padding: 0.25em 1em;
-  text-decoration: none; /* no underline */
-  background-color: lightgray; /* pale bluish white */
-  color: black; /* dark blue */
+.nav li a{
+  color:black
 }
-ul li a:hover, nav ul li a:focus {
-  color: black;
-  background-color: white;
-  font-weight: bold;
+.nav li:hover {
+  color: lightgray;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+.nav li.selected {
+  background-color:lightgray;
+  color: white;
+}
+.nav li.selected:hover {
+  background-color: lightgray;
+  color: white;
+}
+.nav li.selected:active {
+  background-color: lightgray;
+  color: white;
 }

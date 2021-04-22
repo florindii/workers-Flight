@@ -8,6 +8,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./worker-item.component.css']
 })
 export class WorkerItemComponent implements OnInit {
+  selectedFlight?: any;
   flightDetail:any = [];
   flightInfo: any = [];
   workers:any= [];
@@ -21,9 +22,10 @@ export class WorkerItemComponent implements OnInit {
       this.id = params.get('id');
      if (this.id) {
       this.flightInfo = null;
+      this.getOneWorker(this.id)
       setInterval(() => {
-        this.getOneWorker(this.id)
-      },3000)
+        this.flightInfo
+      },60000)
       }
     })
   }
@@ -43,5 +45,8 @@ export class WorkerItemComponent implements OnInit {
       this.flightInfo = flight || null;
   }
 
+  onSelect(num: any): void {
+    this.selectedFlight = num;
+  }
 
 }
